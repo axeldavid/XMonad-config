@@ -1,0 +1,1 @@
+setxkbmap -query | grep 'layout' | grep -o "[a-z]\{2\}$"

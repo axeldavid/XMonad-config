@@ -1,0 +1,14 @@
+#!/usr/bin/env python
+
+from vedur import Weather
+
+w = Weather(lang='en')
+weather = [
+    w.weather and '%s, ' % w.weather or '',
+    u'%s C' % w.temperature.replace(',', '.'),
+    ', %s m/s' % w.wind.replace(',', '.'),
+    ' %s' % w.winddirection,
+    w.date and w.date.strftime(' (%H:%M)') or '',
+]
+
+print ''.join([w for w in weather if w])

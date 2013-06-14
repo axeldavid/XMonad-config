@@ -1,0 +1,2 @@
+#!/bin/bash
+amixer sget Master | grep -o "[0-9]\{1,3\}\%"

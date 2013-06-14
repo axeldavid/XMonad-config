@@ -1,0 +1,12 @@
+#!/bin/zsh
+
+cd_output=`~/coredata/script/coredata super status`
+if [ -n "`echo $cd_output | grep -o "STARTING"`" ]; then
+    echo 'starting'
+elif [ -n "`echo $cd_output | grep -o "RUNNING"`" ] && [ -n "`echo $cd_output | grep -o "STOPPED"`" ]; then
+    echo 'partially running'
+elif [ -n "`echo $cd_output | grep -o "RUNNING"`" ]; then
+    echo 'running'
+elif [ -n "`echo $cd_output | grep -o "STOPPED"`" ]; then
+    echo 'not running'
+fi
