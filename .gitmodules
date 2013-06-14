@@ -1,0 +1,6 @@
+[submodule "rack"]
+	path = rack
+	url = git@github.com:axeldavid/vedur.git
+[submodule "commands/vedur"]
+	path = commands/vedur
+	url = git@github.com:axeldavid/vedur.git
